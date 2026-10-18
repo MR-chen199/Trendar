@@ -167,10 +167,7 @@ jobs:
           S3_ENDPOINT_URL: ${{ secrets.S3_ENDPOINT_URL }}
           S3_REGION: ${{ secrets.S3_REGION }}
           GITHUB_ACTIONS: true
-       - name: 安装本项目
-          run: uv pip install . 
-       - name: 运行爬虫项目
-          run: uv run python -m trendradar
+        run: uv run python -m trendradar
 
       # --------------------------------------------------------------------------------
       # ☁️ CLOUDFLARE PAGES DEPLOY / 部署到 Cloudflare Pages（可选）
